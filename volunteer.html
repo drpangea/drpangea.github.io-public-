@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Volunteer — Alex Sample</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Volunteer — Alex Sample" />
+  <meta property="og:description" content="Sign up to volunteer for Alex Sample's campaign." />
+  <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
+  <meta property="og:url" content="https://drpangea.github.io/volunteer.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Alex Sample</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="donate-cta" href="donate.html">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Volunteer</h2>
+    <p>Join our campaign team. Fill out the form below and we'll be in touch.</p>
+
+    <!-- Example using Formspree. Replace action with your provider or CRM endpoint. -->
+    <form id="volunteer-form" method="POST" action="https://formspree.io/f/your-form-id" data-netlify="true" netlify-honeypot="bot-field" name="volunteer">
+      <input type="hidden" name="form-name" value="volunteer" />
+      <p class="visually-hidden"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
+      <label>
+        Full name
+        <input name="name" type="text" required />
+      </label>
+      <label>
+        Email
+        <input name="email" type="email" required />
+      </label>
+      <label>
+        Phone (optional)
+        <input name="phone" type="tel" />
+      </label>
+      <label>
+        Interests (e.g., canvassing, phonebank, events)
+        <input name="interests" type="text" />
+      </label>
+      <button type="submit" class="btn">Sign up</button>
+    </form>
+
+    <p>If you prefer, email us at <a href="mailto:team@example.com">team@example.com</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Paid for by Alex Sample for Congress Committee.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('volunteer-form').addEventListener('submit', function(e){
+      // Let provider handle submission; add UI hooks here if desired.
+    });
+  </script>
+</body>
+</html>

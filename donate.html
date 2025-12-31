@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donate — Alex Sample</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Donate — Alex Sample" />
+  <meta property="og:description" content="Support Alex Sample's campaign for U.S. House — North Carolina." />
+  <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
+  <meta property="og:url" content="https://drpangea.github.io/donate.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Alex Sample</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="donate-cta" href="donate.html">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Support the Campaign</h2>
+    <p>Thank you for considering a contribution. All contributions will be processed through our secure payment partner.</p>
+
+    <!-- Replace the URL below with the real processor link once you have it -->
+    <p>
+      <a class="btn" href="https://example-processor.example/donate?utm_source=drpangea" id="external-donate" target="_blank" rel="noopener">Donate securely via our processor</a>
+    </p>
+
+    <hr/>
+
+    <h3>Alternative: Quick donation (placeholder)</h3>
+    <p class="muted">This is a placeholder donation intent form. Replace with your processor's secure flow. Do not collect card data directly on this static site.</p>
+
+    <form id="donation-form" method="POST" action="https://example-processor.example/donate">
+      <label>
+        Contribution amount
+        <select name="amount" required>
+          <option value="">Choose</option>
+          <option value="25">$25</option>
+          <option value="50">$50</option>
+          <option value="100">$100</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+
+      <label>
+        Name
+        <input name="name" type="text" required />
+      </label>
+
+      <label>
+        Email
+        <input name="email" type="email" required />
+      </label>
+
+      <p class="muted">You will be redirected to the processor to complete payment.</p>
+      <button type="submit" class="btn">Continue to secure payment</button>
+    </form>
+
+    <section class="legal">
+      <h4>Legal & Compliance</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. FEC/disclosure gibberish placeholder — replace with counsel-approved text. Contributions are not tax deductible.</p>
+      <p>Consult <a href="https://www.fec.gov">FEC.gov</a> for federal rules and your counsel for state-specific details.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Paid for by Alex Sample for Congress Committee. Treasurer: Pat Smith.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('donation-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      var amount = this.amount.value || '0';
+      var processorUrl = 'https://example-processor.example/donate';
+      var url = processorUrl + (processorUrl.indexOf('?') === -1 ? '?' : '&') + 'amount=' + encodeURIComponent(amount);
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
