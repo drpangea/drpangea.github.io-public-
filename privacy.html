@@ -11,32 +11,45 @@
   <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
   <meta property="og:url" content="https://drpangea.github.io/privacy.html" />
 
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Loren Bibler</h1>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+        <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
+        <div class="brand-text">
+          <span class="brand-name">Loren Bibler</span>
+          <span class="brand-sub">for Congress</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
         <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
         <a class="donate-cta" href="donate.html">Donate</a>
       </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Privacy</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar ex sed justo faucibus, vitae dictum nisl vehicula. This is placeholder privacy policy text. Replace with your counsel-approved privacy policy if you collect personal data.</p>
-    <p>We collect only the information you voluntarily provide via forms and do not share it except as required by law. Gibberish examples: ZYX-123 call-to-action copy placeholder.</p>
+  <main class="container narrow">
+    <h1>Privacy</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is placeholder privacy policy text. Replace with counsel-approved language if you collect or process personal data.</p>
+
+    <h2>Information we collect</h2>
+    <p class="muted">We collect only the information you voluntarily provide via forms (name, email, phone, interests) and do not share it except as required by law.</p>
+
+    <h2>How we use information</h2>
+    <p class="muted">We use contact information to communicate campaign updates and coordinate volunteer activities.</p>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
-      <p>Paid for by Loren Bibler for Congress Committee.</p>
+      <p class="muted">Paid for by Loren Bibler for Congress Committee.</p>
     </div>
   </footer>
 </body>

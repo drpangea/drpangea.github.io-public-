@@ -12,37 +12,58 @@
   <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
   <meta property="og:url" content="https://drpangea.github.io/about.html" />
 
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Loren Bibler</h1>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+        <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
+        <div class="brand-text">
+          <span class="brand-name">Loren Bibler</span>
+          <span class="brand-sub">for Congress</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
         <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
         <a class="donate-cta" href="donate.html">Donate</a>
       </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <article>
-      <h2>About Loren Bibler</h2>
-      <p>Loren Bibler is a resident of Sampletown, NC, with experience in community leadership and small business. Loren believes in pragmatic solutions and constituent-first representation.</p>
+  <main id="main" class="container narrow">
+    <article class="about-article">
+      <h1>About Loren Bibler</h1>
+      <p class="lead">Loren Bibler is a lifelong North Carolinian, community leader, and small business advocate who believes in pragmatic, people‑centered solutions.</p>
 
-      <h3 id="committee">Campaign Committee</h3>
-      <p>Campaign Committee: Loren Bibler for Congress Committee. Treasurer: Pat Smith. Mailing address: 123 Campaign Way, Sampletown, NC.</p>
-      <p>For contribution questions, consult campaign counsel. Contributions must comply with federal and state law.</p>
+      <figure class="profile">
+        <img src="/assets/park.svg" alt="Loren Bibler headshot placeholder" loading="lazy" />
+        <figcaption class="muted">Headshot placeholder — replace with a real photo</figcaption>
+      </figure>
+
+      <section>
+        <h2>Biography</h2>
+        <p>Loren grew up in Sampletown and worked in local small businesses and civic organizations. Loren’s priorities include strengthening the local economy, improving healthcare access, and investing in education and workforce development.</p>
+      </section>
+
+      <section id="committee">
+        <h2>Campaign Committee</h2>
+        <p>Campaign Committee: Loren Bibler for Congress Committee. Treasurer: Pat Smith. Mailing address: 123 Campaign Way, Sampletown, NC.</p>
+        <p class="muted">For contribution questions, consult campaign counsel. Contributions must comply with federal and state law.</p>
+      </section>
     </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
-      <p>Paid for by Loren Bibler for Congress Committee.</p>
+      <p class="muted">Paid for by Loren Bibler for Congress Committee.</p>
     </div>
   </footer>
 </body>

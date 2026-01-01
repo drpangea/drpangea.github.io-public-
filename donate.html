@@ -11,84 +11,55 @@
   <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
   <meta property="og:url" content="https://drpangea.github.io/donate.html" />
 
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Loren Bibler</h1>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+        <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
+        <div class="brand-text">
+          <span class="brand-name">Loren Bibler</span>
+          <span class="brand-sub">for Congress</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
         <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
         <a class="donate-cta" href="donate.html">Donate</a>
       </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Support the Campaign</h2>
-    <p>Thank you for considering a contribution. All contributions will be processed through our secure payment partner.</p>
+  <main id="main" class="container narrow">
+    <article>
+      <h1>Support the Campaign</h1>
+      <p>All contributions will be processed through our secure payment partner. Replace the placeholder link below with your approved processor (ActBlue, WinRed, Donorbox, etc.).</p>
 
-    <!-- Replace the URL below with the real processor link once you have it -->
-    <p>
-      <a class="btn" href="https://example-processor.example/donate?utm_source=drpangea" id="external-donate" target="_blank" rel="noopener">Donate securely via our processor</a>
-    </p>
+      <p>
+        <a class="btn btn-primary" href="https://example-processor.example/donate?utm_source=drpangea" target="_blank" rel="noopener">Donate securely via our processor</a>
+      </p>
 
-    <hr/>
+      <hr>
 
-    <h3>Alternative: Quick donation (placeholder)</h3>
-    <p class="muted">This is a placeholder donation intent form. Replace with your processor's secure flow. Do not collect card data directly on this static site.</p>
-
-    <form id="donation-form" method="POST" action="https://example-processor.example/donate">
-      <label>
-        Contribution amount
-        <select name="amount" required>
-          <option value="">Choose</option>
-          <option value="25">$25</option>
-          <option value="50">$50</option>
-          <option value="100">$100</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
-
-      <label>
-        Name
-        <input name="name" type="text" required />
-      </label>
-
-      <label>
-        Email
-        <input name="email" type="email" required />
-      </label>
-
-      <p class="muted">You will be redirected to the processor to complete payment.</p>
-      <button type="submit" class="btn">Continue to secure payment</button>
-    </form>
-
-    <section class="legal">
-      <h4>Legal & Compliance</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. FEC/disclosure gibberish placeholder — replace with counsel-approved text. Contributions are not tax deductible.</p>
-      <p>Consult <a href="https://www.fec.gov">FEC.gov</a> for federal rules and your counsel for state-specific details.</p>
-    </section>
+      <section class="legal">
+        <h2>Legal & Compliance</h2>
+        <p class="muted">Lorem ipsum FEC disclosure placeholder — replace with counsel‑approved text. Contributions are not tax deductible for federal income tax purposes.</p>
+        <p class="muted">Consult <a href="https://www.fec.gov">FEC.gov</a> and campaign counsel for further guidance.</p>
+      </section>
+    </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
-      <p>Paid for by Loren Bibler for Congress Committee. Treasurer: Pat Smith.</p>
+      <p class="muted">Paid for by Loren Bibler for Congress Committee. Treasurer: Pat Smith.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('donation-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      var amount = this.amount.value || '0';
-      var processorUrl = 'https://example-processor.example/donate';
-      var url = processorUrl + (processorUrl.indexOf('?') === -1 ? '?' : '&') + 'amount=' + encodeURIComponent(amount);
-      window.location.href = url;
-    });
-  </script>
 </body>
 </html>

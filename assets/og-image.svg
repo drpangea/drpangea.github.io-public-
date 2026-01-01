@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#004ea2"/>
-  <rect x="40" y="40" width="1120" height="550" rx="16" fill="#ffffff" opacity="0.06"/>
-  <g font-family="Helvetica, Arial, sans-serif" fill="#ffffff">
-    <text x="80" y="220" font-size="56" font-weight="700">Loren Bibler</text>
-    <text x="80" y="285" font-size="28" fill="#f7f7f7">For U.S. House — North Carolina</text>
-    <text x="80" y="340" font-size="20" fill="#f7f7f7">Join the campaign — placeholder preview image</text>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect width="1200" height="630" fill="#0b67c2"/>
+  <g fill="#fff" font-family="Inter, Arial, sans-serif">
+    <text x="80" y="220" font-size="64" font-weight="700">Loren Bibler</text>
+    <text x="80" y="300" font-size="28">For U.S. House — North Carolina</text>
+    <text x="80" y="350" font-size="18" fill="#eaf6ff">Join the campaign — placeholder image</text>
   </g>
-  <g transform="translate(820,110)">
-    <rect x="0" y="0" width="320" height="320" rx="12" fill="#e63946" opacity="0.12"/>
-    <text x="20" y="180" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#fff">SOCIAL</text>
-  </g>
+  <rect x="820" y="110" width="320" height="320" rx="16" fill="#ffffff" opacity="0.06"/>
 </svg>

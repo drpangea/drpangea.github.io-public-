@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect width="1200" height="800" fill="#f1fbff"/>
+  <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#d7f3ff"/><stop offset="1" stop-color="#bfe7ff"/></linearGradient></defs>
+  <rect x="60" y="100" width="1080" height="600" rx="22" fill="url(#g2)"/>
+  <g fill="#0b6b3a">
+    <ellipse cx="360" cy="420" rx="240" ry="120"/>
+    <ellipse cx="840" cy="420" rx="160" ry="90"/>
+  </g>
+  <circle cx="840" cy="360" r="8" fill="#fff"/>
+  <text x="120" y="520" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#064e3b">GOLF & RECREATION</text>
+</svg>

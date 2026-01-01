@@ -11,63 +11,72 @@
   <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
   <meta property="og:url" content="https://drpangea.github.io/volunteer.html" />
 
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Loren Bibler</h1>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+        <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
+        <div class="brand-text">
+          <span class="brand-name">Loren Bibler</span>
+          <span class="brand-sub">for Congress</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
         <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
         <a class="donate-cta" href="donate.html">Donate</a>
       </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Volunteer</h2>
-    <p>Join our campaign team. Fill out the form below and we'll be in touch.</p>
+  <main id="main" class="container narrow">
+    <article>
+      <h1>Volunteer</h1>
+      <p>Join our team: canvassing, phone banking, events, digital outreach — any help is welcome.</p>
 
-    <!-- Example using Formspree. Replace action with your provider or CRM endpoint. -->
-    <form id="volunteer-form" method="POST" action="https://formspree.io/f/your-form-id" data-netlify="true" netlify-honeypot="bot-field" name="volunteer">
-      <input type="hidden" name="form-name" value="volunteer" />
-      <p class="visually-hidden"><label>Don't fill this out if you're human: <input name="bot-field" /></label></p>
-      <label>
-        Full name
-        <input name="name" type="text" required />
-      </label>
-      <label>
-        Email
-        <input name="email" type="email" required />
-      </label>
-      <label>
-        Phone (optional)
-        <input name="phone" type="tel" />
-      </label>
-      <label>
-        Interests (e.g., canvassing, phonebank, events)
-        <input name="interests" type="text" />
-      </label>
-      <button type="submit" class="btn">Sign up</button>
-    </form>
+      <form id="volunteer-form" method="POST" action="https://formspree.io/f/your-form-id" class="form">
+        <label>
+          Full name
+          <input name="name" type="text" required />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Phone (optional)
+          <input name="phone" type="tel" />
+        </label>
+        <label>
+          Interests
+          <select name="interests">
+            <option value="">Select an interest</option>
+            <option>Canvassing</option>
+            <option>Phone banking</option>
+            <option>Events</option>
+            <option>Digital</option>
+          </select>
+        </label>
 
-    <p>If you prefer, email us at <a href="mailto:team@example.com">team@example.com</a>.</p>
+        <button class="btn btn-primary" type="submit">Sign up</button>
+      </form>
+
+      <p class="muted">If you prefer, email us at <a href="mailto:team@example.com">team@example.com</a>.</p>
+    </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
-      <p>Paid for by Loren Bibler for Congress Committee.</p>
+      <p class="muted">Paid for by Loren Bibler for Congress Committee.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('volunteer-form').addEventListener('submit', function(e){
-      // Let provider handle submission; add UI hooks here if desired.
-    });
-  </script>
 </body>
 </html>

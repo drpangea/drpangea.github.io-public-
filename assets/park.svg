@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#bde6d6"/><stop offset="1" stop-color="#8ad4a8"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#eafaf1"/>
+  <rect x="80" y="120" width="1040" height="520" rx="26" fill="url(#g)" opacity="0.95"/>
+  <g fill="#2b6b3a">
+    <circle cx="220" cy="260" r="40"/>
+    <circle cx="270" cy="320" r="34"/>
+    <circle cx="320" cy="280" r="36"/>
+    <circle cx="1020" cy="300" r="50"/>
+  </g>
+  <rect x="220" y="420" width="760" height="24" rx="12" fill="#fff" opacity="0.6"/>
+  <text x="120" y="510" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#064e3b">PARKS & GREEN SPACES</text>
+</svg>
