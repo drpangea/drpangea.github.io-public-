@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Alex Sample for Congress — NC</title>
-  <meta name="description" content="Official site of Alex Sample for U.S. House — North Carolina. Learn about the campaign, priorities, volunteer, and donate." />
+  <title>Loren Bibler for Congress — NC</title>
+  <meta name="description" content="Official site of Loren Bibler for U.S. House — North Carolina. Learn about the campaign, priorities, volunteer, and donate." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Open Graph / Social preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Alex Sample for Congress — NC" />
-  <meta property="og:description" content="Join Alex Sample to build a stronger North Carolina. Volunteer or donate to the campaign." />
+  <meta property="og:title" content="Loren Bibler for Congress — NC" />
+  <meta property="og:description" content="Join Loren Bibler to build a stronger North Carolina. Volunteer or donate to the campaign." />
   <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
   <meta property="og:url" content="https://drpangea.github.io/" />
-  <meta property="og:site_name" content="Alex Sample for Congress" />
+  <meta property="og:site_name" content="Loren Bibler for Congress" />
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Alex Sample for Congress — NC" />
-  <meta name="twitter:description" content="Join Alex Sample to build a stronger North Carolina." />
+  <meta name="twitter:title" content="Loren Bibler for Congress — NC" />
+  <meta name="twitter:description" content="Join Loren Bibler to build a stronger North Carolina." />
   <meta name="twitter:image" content="https://drpangea.github.io/assets/og-image.svg" />
 
   <link rel="icon" href="/assets/favicon.ico" />
@@ -25,56 +28,119 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Alex Sample</h1>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+        <svg class="logo" viewBox="0 0 120 24" aria-hidden="true"><rect width="120" height="24" rx="4" fill="#fff" opacity="0"/></svg>
+        <span class="brand-name">Loren Bibler</span>
+        <span class="brand-sub">for Congress</span>
+      </a>
+
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
         <a class="donate-cta" href="donate.html">Donate</a>
       </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>For a stronger North Carolina</h2>
-      <p class="lead">Committed to local jobs, healthy families, and quality education — Alex Sample stands for practical solutions that put people first.</p>
-      <p>
-        <a class="btn" href="donate.html">Support the campaign</a>
-        <a class="btn secondary" href="volunteer.html">Volunteer</a>
-      </p>
+  <main>
+    <section class="hero container" id="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Putting People First — North Carolina</h1>
+          <p class="hero-lead">Loren Bibler will fight for good jobs, affordable healthcare, and strong public schools across our communities.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="donate.html">Donate</a>
+            <a class="btn btn-ghost" href="volunteer.html">Volunteer</a>
+            <a class="btn btn-outline" href="issues.html">Read the Plan</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <!-- Decorative card; swap with headshot by adding an <img src="/assets/headshot.jpg"> inside -->
+          <div class="card-media">
+            <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" class="card-bg" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/>
+                  <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="400" rx="14" fill="url(#g1)"/>
+            </svg>
+            <div class="card-text">
+              <h4>Campaign kickoff</h4>
+              <p>Join us on [date] — volunteer, donate, or spread the word. Lorem ipsum dolor sit amet.</p>
+              <a class="card-link" href="volunteer.html">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-decor" aria-hidden="true"></div>
     </section>
 
-    <section class="highlights" aria-labelledby="highlights-heading">
-      <h3 id="highlights-heading">Campaign Focus</h3>
-      <ul>
-        <li><strong>Economy:</strong> Practical policies to grow small businesses and jobs in NC.</li>
-        <li><strong>Healthcare:</strong> Protect access and reduce costs for families.</li>
-        <li><strong>Education:</strong> Invest in teachers, students, and workforce training.</li>
-      </ul>
-      <p><a href="issues.html">Read more about our positions</a></p>
+    <section class="highlights container" aria-labelledby="highlights-heading">
+      <h2 id="highlights-heading" class="section-title">Top priorities</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Economy</h3>
+          <p>Support for small businesses, job training, and responsible growth to lift families across our district.</p>
+          <a href="issues.html#economy" class="card-cta">Learn more</a>
+        </article>
+
+        <article class="card">
+          <h3>Healthcare</h3>
+          <p>Protect access, lower prescription costs, and support our rural hospitals and providers.</p>
+          <a href="issues.html#healthcare" class="card-cta">Learn more</a>
+        </article>
+
+        <article class="card">
+          <h3>Education</h3>
+          <p>Invest in teachers, career pathways, and community colleges to prepare our workforce for tomorrow.</p>
+          <a href="issues.html#education" class="card-cta">Learn more</a>
+        </article>
+      </div>
     </section>
 
-    <section class="news" aria-labelledby="news-heading">
-      <h3 id="news-heading">Latest</h3>
-      <article>
-        <h4>Announcement: Campaign kickoff</h4>
-        <p>We are launching the campaign on [date]. Join us — <a href="volunteer.html">sign up to volunteer</a>.</p>
-      </article>
+    <section class="newsletter container" aria-labelledby="stay-heading">
+      <div class="newsletter-inner">
+        <div>
+          <h3 id="stay-heading">Stay in the loop</h3>
+          <p>Sign up for campaign updates and events. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <form class="newsletter-form" method="POST" action="https://formspree.io/f/your-form-id">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Email address" required>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Paid for by Alex Sample for Congress Committee. Treasurer: Pat Smith.</p>
-      <p><a href="privacy.html">Privacy</a></p>
+    <div class="container footer-inner">
+      <p>Paid for by Loren Bibler for Congress Committee. Treasurer: Pat Smith.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        <a href="about.html#committee">Committee</a>
+      </nav>
     </div>
   </footer>
 
   <script>
-    (function(){ /* no-analytics by default */ })();
+    // Small nav toggle for mobile
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.main-nav');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    })();
   </script>
 </body>
 </html>
