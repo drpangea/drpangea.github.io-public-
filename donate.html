@@ -40,13 +40,49 @@
   <main id="main" class="container narrow">
     <article>
       <h1>Support the Campaign</h1>
-      <p>All contributions will be processed through our secure payment partner. Replace the placeholder link below with your approved processor (ActBlue, WinRed, Donorbox, etc.).</p>
+      <p>Thank you for considering a contribution. All contributions will be processed through our secure PayPal donation page.</p>
 
       <p>
-        <a class="btn btn-primary" href="https://example-processor.example/donate?utm_source=drpangea" target="_blank" rel="noopener">Donate securely via our processor</a>
+        <!-- Primary PayPal Donate button/link -->
+        <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=YSFQ734WTYC28" target="_blank" rel="noopener">Donate securely via PayPal</a>
       </p>
 
       <hr>
+
+      <h3>Quick donation (redirect to PayPal)</h3>
+      <p class="muted">Select an amount below and you'll be redirected to PayPal to complete the contribution securely. Do not enter card details on this site.</p>
+
+      <form id="donation-form" class="form" onsubmit="return handleDonate(event);">
+        <label>
+          Contribution amount
+          <select name="amount" id="amount" required>
+            <option value="">Choose</option>
+            <option value="25"> $25</option>
+            <option value="50"> $50</option>
+            <option value="100"> $100</option>
+            <option value="250"> $250</option>
+            <option value="other"> Other amount</option>
+          </select>
+        </label>
+
+        <label id="other-label" style="display:none">
+          Enter amount (USD)
+          <input id="other-amount" name="other-amount" type="number" min="1" step="0.01" />
+        </label>
+
+        <label>
+          Name
+          <input name="name" type="text" />
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" />
+        </label>
+
+        <p class="muted">You will be redirected to PayPal to complete payment.</p>
+        <button type="submit" class="btn btn-primary">Continue to PayPal</button>
+      </form>
 
       <section class="legal">
         <h2>Legal & Compliance</h2>
@@ -61,5 +97,52 @@
       <p class="muted">Paid for by Loren Bibler for Congress Committee. Treasurer: Pat Smith.</p>
     </div>
   </footer>
+
+  <script>
+    // Show/hide "other amount" input
+    document.getElementById('amount').addEventListener('change', function() {
+      const otherLabel = document.getElementById('other-label');
+      if (this.value === 'other') {
+        otherLabel.style.display = 'block';
+        document.getElementById('other-amount').required = true;
+      } else {
+        otherLabel.style.display = 'none';
+        document.getElementById('other-amount').required = false;
+      }
+    });
+
+    // Handle quick donation form: redirect to PayPal hosted donation link with amount param
+    function handleDonate(e) {
+      e.preventDefault();
+      const base = 'https://www.paypal.com/donate/?hosted_button_id=YSFQ734WTYC28';
+      const amountSelect = document.getElementById('amount').value;
+      let amount = '';
+      if (!amountSelect) {
+        alert('Please choose a donation amount.');
+        return false;
+      }
+      if (amountSelect === 'other') {
+        amount = document.getElementById('other-amount').value;
+        if (!amount || Number(amount) <= 0) {
+          alert('Enter a valid donation amount.');
+          return false;
+        }
+      } else {
+        amount = amountSelect;
+      }
+
+      // Build PayPal URL — append amount parameter so PayPal pre-fills amount (USD)
+      // Note: PayPal may accept 'amount' as a query parameter for hosted buttons; test the flow.
+      const url = base + '&amount=' + encodeURIComponent(amount);
+      // Optionally include donor name/email as a reference (not guaranteed to pre-fill PayPal fields)
+      // const name = encodeURIComponent((document.querySelector('[name="name"]').value || ''));
+      // const email = encodeURIComponent((document.querySelector('[name="email"]').value || ''));
+      // window.open(url + '&custom=' + name + '_' + email, '_blank', 'noopener');
+
+      // Redirect current window to PayPal
+      window.location.href = url;
+      return false;
+    }
+  </script>
 </body>
 </html>
