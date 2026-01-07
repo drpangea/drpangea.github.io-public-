@@ -1,34 +1,22 @@
-# Alex Sample — Campaign Website (placeholder)
+# Loren Bibler for Progress — Campaign Website (updated)
 
-This repository contains a minimal static campaign site prepared for GitHub Pages.
+This repository contains a static campaign site for Loren Bibler, ready for GitHub Pages.
 
-Pages included:
-- index.html — main landing page
-- about.html — candidate and committee info
-- issues.html — issues positions
-- volunteer.html — volunteer sign-up (uses external form endpoint)
-- donate.html — donation landing page (links to external processor)
+Contents:
+- index.html — home page with hero + headshot
+- about.html — bio and headshot
+- issues.html — positions
+- volunteer.html — volunteer signups (uses external form endpoint)
+- donate.html — PayPal integration (hosted_button_id=YSFQ734WTYC28)
 - privacy.html — placeholder privacy policy
 - style.css — site styles
-- assets/og-image.svg — placeholder social preview image
+- assets/ — SVG placeholders and (after you add them) headshot images
 
-Site will be served at: https://drpangea.github.io once pushed to the repository named `drpangea.github.io`.
+HEADSHOT: adding your supplied photo
+1. Save your original photo into a temporary folder as headshot-source.jpg.
+2. Create responsive sizes using ImageMagick (see original README instructions) and put them in assets/.
+3. Commit & push.
 
-Placeholders to replace before going public:
-- Candidate name, biography, committee & treasurer fields
-- Replace `https://example-processor.example/donate` with your approved donation processor link (ActBlue / WinRed / Donorbox / etc.).
-- Replace Formspree action in volunteer.html with your form/CRM endpoint.
-- Replace privacy policy text with counsel-approved language.
-- Replace the social preview image (assets/og-image.svg) with a production PNG (1200x630) and update meta tags if necessary.
-- Add a favicon at assets/favicon.ico if desired.
-
-Quick local preview:
-- From the folder, run a simple local server:
-  - python3 -m http.server 8000
-  - open http://localhost:8000 in your browser
-
-Deployment notes:
-- If you create a repository named `drpangea.github.io` and push these files to the `main` branch, GitHub Pages will serve the site at `https://drpangea.github.io/`.
-- No custom domain is configured in this archive.
-
-See the commit & push instructions below for exact commands.
+Notes
+- The donate page uses your PayPal hosted button ID (YSFQ734WTYC28). Test the flow to verify PayPal pre-fills amounts when redirected with &amount=VALUE; if PayPal does not accept that parameter for hosted buttons we can switch to an official PayPal hosted-button form or Smart Buttons.
+- Replace placeholder Formspree endpoint and privacy/legal text with counsel-approved language before collecting data or donations.

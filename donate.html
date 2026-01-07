@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Donate — Loren Bibler</title>
+  <title>Donate — Loren Bibler for Progress</title>
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Donate — Loren Bibler" />
+  <meta property="og:title" content="Donate — Loren Bibler for Progress" />
   <meta property="og:description" content="Support Loren Bibler's campaign for U.S. House — North Carolina." />
-  <meta property="og:image" content="https://drpangea.github.io/assets/og-image.svg" />
+  <meta property="og:image" content="https://drpangea.github.io/assets/headshot-og.png" />
   <meta property="og:url" content="https://drpangea.github.io/donate.html" />
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
@@ -22,7 +22,7 @@
         <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
         <div class="brand-text">
           <span class="brand-name">Loren Bibler</span>
-          <span class="brand-sub">for Congress</span>
+          <span class="brand-sub">for Progress</span>
         </div>
       </a>
 
@@ -94,7 +94,7 @@
 
   <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
-      <p class="muted">Paid for by Loren Bibler for Congress Committee. Treasurer: Pat Smith.</p>
+      <p class="muted">Paid for by Loren Bibler for Progress Committee. Treasurer: Pat Smith.</p>
     </div>
   </footer>
 
@@ -131,15 +131,8 @@
         amount = amountSelect;
       }
 
-      // Build PayPal URL — append amount parameter so PayPal pre-fills amount (USD)
-      // Note: PayPal may accept 'amount' as a query parameter for hosted buttons; test the flow.
+      // Append amount param so PayPal may pre-fill amount
       const url = base + '&amount=' + encodeURIComponent(amount);
-      // Optionally include donor name/email as a reference (not guaranteed to pre-fill PayPal fields)
-      // const name = encodeURIComponent((document.querySelector('[name="name"]').value || ''));
-      // const email = encodeURIComponent((document.querySelector('[name="email"]').value || ''));
-      // window.open(url + '&custom=' + name + '_' + email, '_blank', 'noopener');
-
-      // Redirect current window to PayPal
       window.location.href = url;
       return false;
     }
