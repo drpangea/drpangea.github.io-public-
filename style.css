@@ -55,16 +55,4 @@ body{
   .hero-grid{grid-template-columns:1fr}
   .profile-photo{width:160px;height:160px}
   /* .hero-headshot { width:180px;height:180px } */
-} 
-/* Agronomist section image */
-.agr-image{
-  float:right;
-  margin:0 0 1rem 1rem;
-  max-width:320px;
-}
-.agr-image img{ display:block; width:100%; height:auto; border-radius:8px; object-fit:cover; }
-
-/* Clear float on small viewports */
-@media (max-width:720px){
-  .agr-image{ float:none; margin:0 0 1rem 0; max-width:100%; }
 }
