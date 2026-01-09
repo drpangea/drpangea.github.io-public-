@@ -44,9 +44,13 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;padding-bot
 .card h3{margin-top:0}
 .card-link{display:inline-block;margin-top:.6rem;color:var(--accent)}
 
-/* Profile photo & Agr image */
-.profile-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;display:block;margin-bottom:.5rem;box-shadow:0 10px 24px rgba(9,17,38,0.06);border:4px solid rgba(255,255,255,0.65)}
+/* Profile photo used in bio-card */
+.bio-card{display:flex;gap:1rem;background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 28px rgba(9,17,38,0.06);align-items:center;margin-bottom:1rem}
+.bio-image{flex:0 0 220px}
+.profile-photo{width:220px;height:220px;border-radius:12px;object-fit:cover;display:block;margin:0;box-shadow:0 10px 24px rgba(9,17,38,0.06)}
+.bio-content{flex:1}
 
+/* Agr image */
 .agr-image{float:right;margin:0 0 1rem 1rem;max-width:320px}
 .agr-image img{display:block;width:100%;height:auto;border-radius:8px;object-fit:cover}
 @media (max-width:720px){.agr-image{float:none;margin:0 0 1rem 0;max-width:100%}}
