@@ -3,22 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Volunteer — Loren Bibler for Progress</title>
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Volunteer — Loren Bibler for Progress" />
-  <meta property="og:description" content="Sign up to volunteer for Loren Bibler's campaign." />
-  <meta property="og:image" content="https://drpangea.github.io/assets/headshot-og.png" />
-  <meta property="og:url" content="https://drpangea.github.io/volunteer.html" />
-
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <title>Volunteer — Bibler for Progress</title>
+  <meta name="description" content="Volunteer with Loren Bibler — canvassing, phone banking, events." />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Loren Bibler home">
+      <a class="brand" href="/" aria-label="Loren Bibler home">
         <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0b67c2"/></svg>
         <div class="brand-text">
           <span class="brand-name">Loren Bibler</span>
@@ -26,50 +20,48 @@
         </div>
       </a>
 
-      <nav class="main-nav" aria-label="Primary">
-        <a href="about.html">About</a>
-        <a href="issues.html">Issues</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a class="donate-cta" href="donate.html">Donate</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/about.html">About</a>
+        <a href="/issues.html">Top Priorities</a>
+        <a href="/volunteer.html" aria-current="page">Volunteer</a>
+        <a class="donate-cta" href="/donate.html">Donate</a>
       </nav>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">☰</button>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
 
   <main id="main" class="container narrow">
     <article>
       <h1>Volunteer</h1>
-      <p>Join our team: canvassing, phone banking, events, digital outreach — any help is welcome.</p>
 
-      <form id="volunteer-form" method="POST" action="https://formspree.io/f/your-form-id" class="form">
-        <label>
-          Full name
-          <input name="name" type="text" required />
-        </label>
-        <label>
-          Email
-          <input name="email" type="email" required />
-        </label>
-        <label>
-          Phone (optional)
-          <input name="phone" type="tel" />
-        </label>
-        <label>
-          Interests
-          <select name="interests">
-            <option value="">Select an interest</option>
+      <section>
+        <h2>Get involved</h2>
+        <p>Our team is working to schedule town halls, Canvassing campaigns, and phone banking opportunities!</p>
+
+        <p>Contact: <a href="mailto:biblerforprogress@gmail.com">biblerforprogress@gmail.com</a></p>
+
+        <form class="volunteer-form" method="POST" action="https://formspree.io/f/your-form-id" aria-label="Volunteer signup">
+          <label class="sr-only" for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Full name" required>
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email address" required>
+
+          <label class="sr-only" for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Phone (optional)">
+
+          <label for="interest">Areas of interest</label>
+          <select id="interest" name="interest">
             <option>Canvassing</option>
             <option>Phone banking</option>
-            <option>Events</option>
-            <option>Digital</option>
+            <option>Events & town halls</option>
+            <option>Digital outreach</option>
           </select>
-        </label>
 
-        <button class="btn btn-primary" type="submit">Sign up</button>
-      </form>
-
-      <p class="muted">If you prefer, email us at <a href="mailto:team@example.com">team@example.com</a>.</p>
+          <button class="btn btn-primary" type="submit">Sign up</button>
+        </form>
+      </section>
     </article>
   </main>
 
