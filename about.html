@@ -13,83 +13,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-TQZRX7WSH3');
   </script>
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/style.css" />
-
-  <!-- Page-specific responsive fixes for the Loren Who block (mobile-first, iOS-safe) -->
-  <style>
-    /* Ensure the bio card stacks on narrow viewports and centers content */
-    .bio-card{
-      display:flex;
-      flex-direction:column;
-      gap:0.75rem;
-      align-items:center;
-      padding:0.75rem;
-      background:var(--card);
-      border-radius:10px;
-      box-shadow:0 8px 24px rgba(9,17,38,0.04);
-    }
-
-    .bio-image{
-      width:140px;
-      flex:0 0 auto;
-      display:block;
-      text-align:center;
-    }
-
-    .profile-photo{
-      width:100%;
-      height:auto;
-      border-radius:12px;
-      display:block;
-      box-shadow:0 8px 20px rgba(9,17,38,0.06);
-      border:3px solid rgba(255,255,255,0.6);
-    }
-
-    .bio-content{
-      width:100%;
-      text-align:center;
-    }
-
-    /* Make sure agr-image is block-level and doesn't float */
-    .agr-image{
-      display:block;
-      width:100%;
-      max-width:100%;
-      margin:0 0 1rem 0;
-      text-align:center;
-    }
-    .agr-image img{ width:100%; height:auto; border-radius:8px; display:block; }
-
-    /* Larger screens: side-by-side layout with left image column and right content */
-    @media(min-width:721px){
-      .bio-card{
-        flex-direction:row;
-        align-items:flex-start;
-      }
-      .bio-image{
-        width:220px;
-        margin-right:1rem;
-      }
-      .bio-content{
-        text-align:left;
-      }
-      .agr-image{
-        float:none;
-        max-width:320px;
-        margin:0 0 1rem 1rem;
-        display:inline-block;
-      }
-    }
-  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Loren Bibler home">
@@ -115,13 +45,12 @@
     <article class="about-article">
       <h1>About Loren Bibler</h1>
 
-      <!-- Loren who? — simplified, mobile-first card -->
       <section class="bio-card" aria-labelledby="loren-who">
         <div class="bio-image" aria-hidden="true">
           <img
             src="/assets/headshot-md.jpg"
             srcset="/assets/headshot-sm.jpg 400w, /assets/headshot-md.jpg 800w, /assets/headshot-lg.jpg 1600w"
-            sizes="(max-width:720px) 60vw, 220px"
+            sizes="(max-width:720px) 60vw, 200px"
             alt="Headshot of Loren Bibler"
             class="profile-photo"
             loading="lazy"
@@ -180,6 +109,11 @@
   <footer class="site-footer minimal" role="contentinfo">
     <div class="container">
       <p class="muted">Updated and maintained by Bibler for Progress Inc</p>
+      <div class="social-links" style="margin-top:.75rem">
+        <a href="https://www.tiktok.com/@biblerforprogress" target="_blank" rel="noopener">TikTok</a> ·
+        <a href="https://www.facebook.com/profile.php?id=61586566491590" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="https://www.instagram.com/biblerforprogress/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
   </footer>
 </body>
